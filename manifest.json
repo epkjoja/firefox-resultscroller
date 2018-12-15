@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "ResultScroller",
+  "description": "Scroll a tab/page to the bottom, pause, scroll up to top, reload and repeat.\n\nThis add-on is written for scrolling sport results that are updated as more competitors finishes. When the results page gets bigger than what the browser window can show, it will start to scroll its content.\n\nThe scroll speed, the length of the pauses at the top and bottom and the minimum time between reloads are fully configurable.",
+
+  "version": "0.1",
+
+  "author": "joja",
+  "homepage_url": "https://github.com/epkjoja/",
+
+  "permissions": ["storage"],
+
+  "icons": {
+    "48": "icons/scroll.svg",
+    "96": "icons/scroll.svg"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/scroll.svg",
+      "32": "icons/scroll.svg"
+    },
+    "default_title": "ResultScroller"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*", "file:///*" ],
+      "js": [ "scroller.js" ]
+    }
+  ],
+
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+
+  "options_ui": {
+    "page": "options/options.html"
+  }
+}
