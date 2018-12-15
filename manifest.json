@@ -6,7 +6,13 @@
   "version": "0.1",
 
   "author": "joja",
-  "homepage_url": "https://github.com/epkjoja/",
+  "homepage_url": "https://github.com/epkjoja/firefox-resultscroller",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "resultscroller@joja.se"
+    }
+  },
 
   "permissions": ["storage"],
 
